@@ -1,11 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { HouseDoor, FileEarmarkText, ShieldCheck, People, Book } from "react-bootstrap-icons";
+import {
+  HouseDoor,
+  FileEarmarkText,
+  ShieldCheck,
+  People,
+  Book
+} from "react-bootstrap-icons";
 import { FiLogOut, FiSettings } from "react-icons/fi";
 import "../css/Sidebar.css";
 
 const SideBar = () => {
-  const [userManagementDropdownVisible, setUserManagementDropdownVisible] = useState(false);
+  const [userManagementDropdownVisible, setUserManagementDropdownVisible] =
+    useState(false);
   const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
@@ -51,7 +58,8 @@ const SideBar = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#" onClick={closeDropdown}>
-                <FileEarmarkText className="fileearmark" size={20} /> Certificate Management
+                <FileEarmarkText className="fileearmark" size={20} />{" "}
+                Certificate Management
               </a>
             </li>
             <li className="nav-item">
@@ -61,7 +69,12 @@ const SideBar = () => {
             </li>
 
             {/* User Management Dropdown */}
-            <li className={`nav-item dropdown ${userManagementDropdownVisible ? "show" : ""}`} ref={dropdownRef}>
+            <li
+              className={`nav-item dropdown ${
+                userManagementDropdownVisible ? "show" : ""
+              }`}
+              ref={dropdownRef}
+            >
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -74,7 +87,12 @@ const SideBar = () => {
               >
                 <People className="people" size={20} /> User Management
               </a>
-              <div className={`dropdown-menu ${userManagementDropdownVisible ? "show" : ""}`} aria-labelledby="userManagementDropdown">
+              <div
+                className={`dropdown-menu ${
+                  userManagementDropdownVisible ? "show" : ""
+                }`}
+                aria-labelledby="userManagementDropdown"
+              >
                 <a className="dropdown-item" href="#">
                   Student
                 </a>
