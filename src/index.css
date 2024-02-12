@@ -1,4 +1,9 @@
+* {
+  margin: 0; /* Remove default margin to ensure full-width sidebar */
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #ebffe5;
-  margin: 0; /* Remove default margin to ensure full-width sidebar */
 }

@@ -6,21 +6,35 @@
     top: 0;
     left: 240px; /* Adjust based on the width of the sidebar */
     width: calc(100% - 240px); /* Adjust based on the width of the sidebar */
-    height: 110px; /* Adjust the height as needed */
+    height: 90px; /* Adjust the height as needed */
     background-color: #ffffff; /* Example background color */
     border-bottom: 1px solid #ddd; /* Example border */
     display: flex;
     align-items: flex-start;
     z-index: 1000; /* Ensure the container is above the sidebar */
+    justify-content: center;
+    padding: 0 25px;
   }
-  .page-title {
+.header {
+  display: Flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.header p {
+  margin: 0;
+}
+
+
+
+ .page-title {
     font-size: 30px;
-    display: flex;
-    justify-content: flex-start;
     font-weight: bold;
     font-family: sans-serif;
   }
-  
+
   .page-date {
     display: flex;
     font-size: 15px;
@@ -29,11 +43,51 @@
     color: gray;
   }
 
-  .admin-profile-container{
+  .admin-profile-container-top {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin: auto 0;
+    height: 67.5px;
+  }
+
+  .profile_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile_top .admin-profile{
+    margin: 0;
+  }
+
+  .admin_info_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .admin_info_top p{
+    margin: 0;
+  }
+
+  .admin_info_top .admin-name_top {
+    font-weight: bold;
+  }
+
+  .admin_info_top .admin-position_top {
+    color: gray;
+    font-size: 15px;
+  }
+  
+  /* 
+
+  .admin-profile-container-top{
     margin: 0;
     padding: 0;
 
-  }
+  } */ 
 
   
 
