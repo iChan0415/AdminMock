@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/TopBar.css";
+import { FiBell, FiMessageSquare } from 'react-icons/fi';
 
 const TopBar = () => {
   return (
@@ -11,6 +12,8 @@ const TopBar = () => {
         </div>
         <div className="admin-profile-container-top">
           <div className="profile_top">
+          <FiMessageSquare className="message-icon" size={20} />
+          <FiBell className="notification-icon" size={20} /> {/* Add the notification icon */}
             <a className="profile-settings_top" href="#">
               <img
                 className="admin-profile"
