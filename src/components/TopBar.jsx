@@ -4,18 +4,46 @@ import "../css/TopBar.css";
 import { FiBell, FiMessageSquare } from "react-icons/fi";
 
 const TopBar = () => {
+  const [currentDate, setCurrentDate] = useState(getDate());
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
+  function getDate() {
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const today = new Date();
+    const monthIndex = today.getMonth();
+    const year = today.getFullYear();
+    const date = today.getDate();
+    const ordinalIndicator = getOrdinalIndicator(date);
+    const monthAbbreviation = monthNames[monthIndex];
+    return `${date}${ordinalIndicator} ${monthAbbreviation} ${year}`;
+  }
+  
+  function getOrdinalIndicator(date) {
+    if (date >= 11 && date <= 13) {
+      return "th";
+    }
+    switch (date % 10) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  }
+
   return (
     <div>
       <div className="page-title-container">
         <div className="header">
           <p className="page-title">Dashboard</p>
-          <p className="page-date">12th Feb 2024</p>
+          <p className="page-date">{currentDate}</p>
         </div>
         <div className="admin-profile-container-top">
           <div className="profile_top">
