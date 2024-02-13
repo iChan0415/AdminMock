@@ -42,7 +42,7 @@ const SideBar = () => {
       <nav className="bg-light sidebar">
         <div className="sidebar-sticky">
           <div className="logo-title-container">
-            <a className="" href="#">
+            <a className="" href="/admin_dashboard">
               <img
                 className="admin-logo"
                 src="src/assets/TsukidenLogo.png"
@@ -52,18 +52,18 @@ const SideBar = () => {
           </div>
           <ul className="nav flex-column">
             <li className="nav-item">
-              <a className="nav-link active" href="#" onClick={closeDropdown}>
+              <a className="nav-link active" href="/admin_dashboard" onClick={closeDropdown}>
                 <HouseDoor className="housedoor" size={20} /> Dashboard
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={closeDropdown}>
+              <a className="nav-link" href="/admin_certificate" onClick={closeDropdown}>
                 <FileEarmarkText className="fileearmark" size={20} />{" "}
                 Certificate Management
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={closeDropdown}>
+              <a className="nav-link" href="/admin_verification" onClick={closeDropdown}>
                 <ShieldCheck className="shieldcheck" size={20} /> Verification
               </a>
             </li>
@@ -93,29 +93,29 @@ const SideBar = () => {
                 }`}
                 aria-labelledby="userManagementDropdown"
               >
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/admin_student">
                   Student
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/admin_instructor">
                   Instructor
                 </a>
               </div>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={closeDropdown}>
+              <a className="nav-link" href="/admin_course" onClick={closeDropdown}>
                 <Book className="book" size={20} /> Course Management
               </a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={closeDropdown}>
+              <a className="nav-link" href="/admin_settings" onClick={closeDropdown}>
                 <FiSettings className="fi-settings" size={20} /> Settings
               </a>
             </li>
 
             <div className="admin-profile-container">
-              <a className="profile-settings" href="#">
+              <a className="profile-settings" href="/admin_profile">
                 <img
                   className="admin-profile"
                   src="src/assets/SatoruGojo.jpg"
@@ -127,7 +127,7 @@ const SideBar = () => {
             </div>
 
             <li className="nav-item-logout">
-              <a className="nav-link active" href="#">
+              <a className="nav-link active" href="/admin_landing">
                 <FiLogOut className="fi-log-out" size={15} /> Log Out
               </a>
             </li>

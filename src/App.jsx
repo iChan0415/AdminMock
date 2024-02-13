@@ -1,13 +1,11 @@
 import React from 'react';
-import SideBar from './components/SideBar';
-import TopBar from './components/TopBar';
+import Router from './components/Router';
 
 
 const App = () => {
   return (
     <div>
-      <SideBar/>
-      <TopBar/>
+      <Router/>
     </div>
   );
 };

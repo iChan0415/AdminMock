@@ -61,10 +61,10 @@ const TopBar = () => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#">Profile</Dropdown.Item>
-                <Dropdown.Item href="#">Settings</Dropdown.Item>
+                <Dropdown.Item href="/admin_profile">Profile</Dropdown.Item>
+                <Dropdown.Item href="/admin_settings">Settings</Dropdown.Item>
                 <Dropdown.Divider />
-                <Dropdown.Item href="#">Logout</Dropdown.Item>
+                <Dropdown.Item href="/admin_landing">Logout</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </div>

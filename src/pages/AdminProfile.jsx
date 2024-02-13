@@ -2,11 +2,11 @@ import React from 'react'
 import SideBar from '../components/SideBar';
 import TopBar from '../components/TopBar';
 
-const AdminDashboard = () => {
+const AdminProfile = () => {
   return (
     <div><SideBar/>
     <TopBar/></div>
   )
 }
 
-export default AdminDashboard
+export default AdminProfile
