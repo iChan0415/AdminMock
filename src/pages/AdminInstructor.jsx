@@ -2,13 +2,6 @@ import React from 'react';
 import SideBar from '../components/SideBar';
 import TopBar from '../components/TopBar';
 
-// Define your data
-const data = [
-  { id: 1, name: 'John', age: 30 },
-  { id: 2, name: 'Doe', age: 25 },
-  { id: 3, name: 'Jane', age: 35 },
-];
-
 const AdminInstructor = () => {
   // Define handleAction function if needed
   const handleAction = (event) => {

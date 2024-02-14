@@ -5,7 +5,7 @@ import TopBar from '../components/TopBar';
 const AdminProfile = () => {
   return (
     <div><SideBar/>
-    <TopBar/></div>
+    <TopBar pageTitle = "Admin Profile" /></div>
   )
 }
 
