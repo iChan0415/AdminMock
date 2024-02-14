@@ -9,13 +9,14 @@ import AdminInstructor from './../pages/AdminInstructor';
 import AdminSettings from './../pages/AdminSettings';
 import AdminProfile from '../pages/AdminProfile';
 import AdminLanding from '../pages/AdminLanding';
+import UserManagement from './UserManagement';
 
 const Router = () => {
   return (
     <div>
          <BrowserRouter>
         <Routes>
-        <Route path="/admin_dashboard" element={<AdminDashboard />} />
+        <Route index element={<AdminDashboard />} />
           <Route path="/admin_certificate" element={<AdminCertificate />} />
           <Route path="/admin_verification" element={<AdminVerification/>} />
           <Route path="/admin_course" element={<AdminCourseManagement />} />
@@ -24,6 +25,7 @@ const Router = () => {
           <Route path="/admin_settings" element={<AdminSettings/>} />
           <Route path="/admin_profile" element={<AdminProfile/>} />
           <Route path="/admin_landing" element={<AdminLanding/>} />
+          <Route path="/UserManagement" element={<UserManagement/>}/>
         </Routes>
       </BrowserRouter>
     </div>

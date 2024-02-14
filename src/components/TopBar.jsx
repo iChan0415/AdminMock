@@ -3,7 +3,7 @@ import { Dropdown } from "react-bootstrap";
 import "../css/TopBar.css";
 import { FiBell, FiMessageSquare } from "react-icons/fi";
 
-const TopBar = () => {
+const TopBar = ({name}) => {
   const [currentDate, setCurrentDate] = useState(getDate());
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -42,7 +42,7 @@ const TopBar = () => {
     <div>
       <div className="page-title-container">
         <div className="header">
-          <p className="page-title">Dashboard</p>
+          <p className="page-title">{name}</p>
           <p className="page-date">{currentDate}</p>
         </div>
         <div className="admin-profile-container-top">

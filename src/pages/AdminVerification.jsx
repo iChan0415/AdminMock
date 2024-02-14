@@ -5,7 +5,7 @@ import TopBar from '../components/TopBar';
 const AdminVerification = () => {
   return (
     <div><SideBar/>
-    <TopBar/></div>
+    <TopBar name="Verification"/></div>
   )
 }
 
