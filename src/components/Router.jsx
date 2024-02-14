@@ -15,6 +15,7 @@ const Router = () => {
     <div>
          <BrowserRouter>
         <Routes>
+        <Route index element={<AdminDashboard />} />
         <Route path="/admin_dashboard" element={<AdminDashboard />} />
           <Route path="/admin_certificate" element={<AdminCertificate />} />
           <Route path="/admin_verification" element={<AdminVerification/>} />
