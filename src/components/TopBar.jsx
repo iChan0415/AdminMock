@@ -74,13 +74,6 @@ const TopBar = ({pageTitle}) => {
   </div>*/} 
         </div>
       </div>
-      <div className="search-container">
-        <input className="input-search"
-        placeholder="Search for category, name ID and etc..">
-          
-        </input>
-          <button className="btn-search">SEARCH</button>
-        </div>
     </div>
   );
 };
