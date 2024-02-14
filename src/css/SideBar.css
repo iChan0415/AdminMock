@@ -11,7 +11,9 @@ body {
 
 .sidebar {
   position: fixed;
-  height: 100vh;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 240px; /* Adjust the width as needed */
   background-color: #f8f9fa; /* Example background color */
   padding-top: 10px;
