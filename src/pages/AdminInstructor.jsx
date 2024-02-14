@@ -11,38 +11,40 @@ const AdminInstructor = () => {
 
   return (
     <div>
-    <SideBar />
-    <TopBar name="Instructor"/>
-    <div className='table-container'>
-    <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>John Doe</td>
-      <td>john@example.com</td>
-      <td>
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
-      </td>
-    </tr>
-    <tr>
-      <td>Jane Smith</td>
-      <td>jane@example.com</td>
-      <td>
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+      <SideBar />
+      <div>
+        <TopBar pageTitle="Instructor" />
+        <div className='table-container'>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Jane Smith</td>
+                <td>jane@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-  </div>
   );
 };
 

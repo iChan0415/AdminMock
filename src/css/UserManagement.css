@@ -1,13 +1,8 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
 table {
   width: 1150px;
   border-collapse: collapse;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  margin-top: 170px;
   margin-left: 230px;
 }
 th, td {
@@ -46,5 +41,5 @@ tr:hover {
 }
 
 .table-container{
-  padding-left: 50px;
+  margin-top: 100px;
 }
