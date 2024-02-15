@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Table, Button } from "react-bootstrap";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
-import "../css/CertTable.css";
+import "../css/Tables.css";
 
 const AdminCertificate = () => {
   const [certificates, setCertificates] = useState([]);
@@ -56,9 +55,8 @@ const AdminCertificate = () => {
         <SideBar />
         <TopBar pageTitle="Certificate Management" />
       </div>
-      <div className="admincert-container">
-        <div className="admincert-table-wrapper">
-          <Table striped bordered hover className="admincert-table">
+      <div className="table-container">
+          <table>
             <thead>
               <tr>
                 <th>ID</th>
@@ -81,27 +79,12 @@ const AdminCertificate = () => {
                   <td>{certificate.time_issued}</td>
                   <td>{certificate.serial_no}</td>
                   <td>
-                    <Button
-                      variant="info"
-                      onClick={() => handleEditCertificate(certificate)}
-                    >
-                      Edit
-                    </Button>{" "}
-                    <Button
-                      variant="danger"
-                      onClick={() =>
-                        handleDeleteCertificate(certificate.certificateID)
-                      }
-                    >
-                      Delete
-                    </Button>
                   </td>
                 </tr>
               ))}
             </tbody>
-          </Table>
+            </table>
         </div>
-      </div>
     </>
   );
 };
