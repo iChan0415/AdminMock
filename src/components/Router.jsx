@@ -26,7 +26,6 @@ const Router = () => {
           <Route path="/admin_settings" element={<AdminSettings/>} />
           <Route path="/admin_profile" element={<AdminProfile/>} />
           <Route path="/admin_landing" element={<AdminLanding/>} />
-          <Route path="/UserManagement" element={<AdminUsersTables/>}/>
         </Routes>
       </BrowserRouter>
     </div>

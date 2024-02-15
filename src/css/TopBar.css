@@ -111,29 +111,40 @@
   padding-right: 40px;
   padding-left: 40px;
   border-radius: 10px;
-  font-family: sans-serif;
   font-size: 9px; 
+  font-weight: bold;
+  height: 40px;
   
-}
-
-.input-search:focus{
-  outline: none;
 }
 
 .btn-search:hover {
   background-color: rgb(26, 96, 26);
   color: #fff;
+  font-weight: bold;
   transition: background-color 0.3s;
 }
 
-.input-search{
+.input-search {
   display: flex;
   height: 40px;
   width: 30%;
   border-radius: 8px;
-  border: 1px solid black;
+  border: none;
+  background-color: #f4f7f4;
   padding-left: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: box-shadow 0.3s ease; /* Add transition for smooth hover effect */
 }
+
+.input-search:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust box shadow on hover */
+}
+
+
+.input-search:focus{
+  outline: none;
+}
+
 ::placeholder {
   font-size: 10px;
 }

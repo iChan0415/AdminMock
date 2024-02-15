@@ -60,12 +60,12 @@ const AdminCertificate = () => {
             <thead>
               <tr>
                 <th>ID</th>
-                <th>File Name</th>
-                <th>Criteria</th>
-                <th>Date Issued</th>
-                <th>Time Issued</th>
-                <th>Serial No.</th>
-                <th>Actions</th>
+                <th>FILE NAME</th>
+                <th>CRITERIA</th>
+                <th>DATE ISSUED</th>
+                <th>TIME ISSUED</th>
+                <th>SERIAL NO.</th>
+                <th>ACTIONS</th>
               </tr>
             </thead>
             <tbody>

@@ -76,7 +76,7 @@ const TopBar = ({pageTitle}) => {
       </div>
       <div className="search-container">
         <input className="input-search"
-        placeholder="Search for category, name ID and etc..">
+        placeholder="Search for Category, Name, ID and etc..">
 
         </input>
           <button className="btn-search">SEARCH</button>
