@@ -56,20 +56,8 @@ const SideBar = () => {
                 <HouseDoor className="housedoor" size={20} /> Dashboard
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/admin_certificate" onClick={closeDropdown}>
-                <FileEarmarkText className="fileearmark" size={20} />{" "}
-                Certificate Management
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/admin_verification" onClick={closeDropdown}>
-                <ShieldCheck className="shieldcheck" size={20} /> Verification
-              </a>
-            </li>
-
-            {/* User Management Dropdown */}
-            <li
+             {/* User Management Dropdown */}
+             <li
               className={`nav-item dropdown ${
                 userManagementDropdownVisible ? "show" : ""
               }`}
@@ -101,13 +89,22 @@ const SideBar = () => {
                 </a>
               </div>
             </li>
-
             <li className="nav-item">
               <a className="nav-link" href="/admin_course" onClick={closeDropdown}>
                 <Book className="book" size={20} /> Course Management
               </a>
             </li>
-
+            <li className="nav-item">
+              <a className="nav-link" href="/admin_certificate" onClick={closeDropdown}>
+                <FileEarmarkText className="fileearmark" size={20} />{" "}
+                Certificate Management
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/admin_verification" onClick={closeDropdown}>
+                <ShieldCheck className="shieldcheck" size={20} /> Verification
+              </a>
+            </li>
             <li className="nav-item">
               <a className="nav-link" href="/admin_settings" onClick={closeDropdown}>
                 <FiSettings className="fi-settings" size={20} /> Settings

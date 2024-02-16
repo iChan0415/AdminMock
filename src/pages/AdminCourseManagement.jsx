@@ -5,7 +5,8 @@ import TopBar from '../components/TopBar';
 const AdminCourseManagement = () => {
   return (
     <div><SideBar/>
-    <TopBar pageTitle = "Course Management" /></div>
+    <TopBar pageTitle = "Course Management" />
+   </div>
   )
 }
 

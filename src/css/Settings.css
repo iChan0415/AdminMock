@@ -29,5 +29,7 @@
 }
 .card:hover{
 color: white;
-background-color: green;
+background-color:lightgreen;
+transition: background-color 0.3s;
+box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
