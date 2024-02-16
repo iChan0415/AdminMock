@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import '../css/Tables.css'; // Import CSS file for Tables styling
 
 const AdminTables = () => {
-  const [content, setContent] = useState(
-  );
+  const data = [
+    // ... your data
+  ];
+
+  const itemsPerPage = 5; // Set the number of items to display per page
+  const [currentPage, setCurrentPage] = useState(1);
+
   const handleAction = (e) => {
     const selectedAction = e.target.value;
     if (selectedAction === 'Edit') {
@@ -21,6 +26,19 @@ const AdminTables = () => {
     console.log('Delete action');
   };
 
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => (prevPage % totalPages) + 1);
+  };
+
+  const handlePrevPage = () => {
+    setCurrentPage((prevPage) => (prevPage === 1 ? totalPages : prevPage - 1));
+  };
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const visibleData = data.slice(startIndex, endIndex);
   return (
       <div>
           <div className='table-container'>
@@ -48,11 +66,193 @@ const AdminTables = () => {
                 </td>
               </tr>
               <tr>
-              <td>123123123</td>
-                <td>JD</td>
-                <td>JANE DOEY</td>
-                <td>Picture</td>
+                <td>John Doe</td>
                 <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>
+                  <button className="edit-btn" onClick={handleAction}>Edit</button>
+                  <button className="delete-btn" onClick={handleAction}>Delete</button>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>Jane Smith</td>
+                <td>jane@example.com</td>
                 <td>
                   <button className="edit-btn" onClick={handleAction}>Edit</button>
                   <button className="delete-btn" onClick={handleAction}>Delete</button>
