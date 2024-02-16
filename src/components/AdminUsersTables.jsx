@@ -49,8 +49,8 @@ const AdminTables = () => {
               </tr>
               <tr>
               <td>123123123</td>
-                <td>JohnD</td>
-                <td>John Doe</td>
+                <td>JD</td>
+                <td>JANE DOEY</td>
                 <td>Picture</td>
                 <td>john@example.com</td>
                 <td>
