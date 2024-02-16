@@ -1,12 +1,16 @@
+.settings-container{
+    display: flex;
+    justify-content: center;
+}
+
 .card-container {
-    max-width: 1200px;
+   
     padding: 20px;
-    margin-left:260px;
+    margin-left:240px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 100px;
-
 }
 
 .card {

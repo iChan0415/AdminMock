@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
 import "../css/Tables.css";
+import SearchBar from "../components/SearchBar";
 
 const AdminCertificate = () => {
   const [certificates, setCertificates] = useState([]);
@@ -54,6 +55,7 @@ const AdminCertificate = () => {
       <div>
         <SideBar />
         <TopBar pageTitle="Certificate Management" />
+        <SearchBar/>
       </div>
       <div className="table-container">
           <table>

@@ -39,7 +39,6 @@ const TopBar = ({pageTitle}) => {
   }
 
   return (
-    <div>
       <div className="page-title-container">
         <div className="header">
           <p className="page-title">{pageTitle}</p>
@@ -74,14 +73,6 @@ const TopBar = ({pageTitle}) => {
   </div>*/} 
         </div>
       </div>
-      <div className="search-container">
-        <input className="input-search"
-        placeholder="Search for Category, Name, ID and etc..">
-
-        </input>
-          <button className="btn-search">SEARCH</button>
-        </div>
-    </div>
   );
 };
 
