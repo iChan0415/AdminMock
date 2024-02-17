@@ -131,4 +131,23 @@ a:focus {
   background-color: #ebffe5;
 }
 
+
+.dropdown-item2 {
+  color: #495057;
+  font-size: 10px;
+  width: 100%;
+  color: #000;
+}
+
+.dropdown-item2:hover {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.dropdown-menu2 {
+  background-color: #ebffe5;
+}
+
 /* Add more styles as needed */

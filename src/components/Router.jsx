@@ -10,6 +10,7 @@ import AdminSettings from './../pages/AdminSettings';
 import AdminProfile from '../pages/AdminProfile';
 import AdminLanding from '../pages/AdminLanding';
 import AdminUsersTables from './AdminUsersTables';
+import AdminCourses from '../pages/AdminCourses';
 
 const Router = () => {
   return (
@@ -26,6 +27,7 @@ const Router = () => {
           <Route path="/admin_settings" element={<AdminSettings/>} />
           <Route path="/admin_profile" element={<AdminProfile/>} />
           <Route path="/admin_landing" element={<AdminLanding/>} />
+          <Route path="/admin_courses" element={<AdminCourses/>}/>
         </Routes>
       </BrowserRouter>
     </div>
