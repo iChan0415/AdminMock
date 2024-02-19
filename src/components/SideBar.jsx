@@ -13,20 +13,34 @@ import "../css/Sidebar.css";
 const SideBar = () => {
   const [userManagementDropdownVisible, setUserManagementDropdownVisible] =
     useState(false);
-  const dropdownRef = useRef(null);
+  const [courseManagementDropdownVisible, setCourseManagementDropdownVisible] =
+    useState(false);
 
-  const toggleDropdown = () => {
+  const userDropdownRef = useRef(null);
+  const courseDropdownRef = useRef(null);
+
+  const toggleUserDropdown = () => {
     setUserManagementDropdownVisible(!userManagementDropdownVisible);
   };
 
-  const closeDropdown = () => {
+  const toggleCourseDropdown = () => {
+    setCourseManagementDropdownVisible(!courseManagementDropdownVisible);
+  };
+
+  const closeDropdowns = () => {
     setUserManagementDropdownVisible(false);
+    setCourseManagementDropdownVisible(false);
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        closeDropdown();
+      if (
+        userDropdownRef.current &&
+        !userDropdownRef.current.contains(event.target) &&
+        courseDropdownRef.current &&
+        !courseDropdownRef.current.contains(event.target)
+      ) {
+        closeDropdowns();
       }
     };
 
@@ -52,28 +66,20 @@ const SideBar = () => {
           </div>
           <ul className="nav flex-column">
             <li className="nav-item">
-              <a className="nav-link active" href="/admin_dashboard" onClick={closeDropdown}>
+              <a
+                className="nav-link active"
+                href="/admin_dashboard"
+                onClick={closeDropdowns}
+              >
                 <HouseDoor className="housedoor" size={20} /> Dashboard
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/admin_certificate" onClick={closeDropdown}>
-                <FileEarmarkText className="fileearmark" size={20} />{" "}
-                Certificate Management
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/admin_verification" onClick={closeDropdown}>
-                <ShieldCheck className="shieldcheck" size={20} /> Verification
-              </a>
-            </li>
-
             {/* User Management Dropdown */}
             <li
               className={`nav-item dropdown ${
                 userManagementDropdownVisible ? "show" : ""
               }`}
-              ref={dropdownRef}
+              ref={userDropdownRef}
             >
               <a
                 className="nav-link dropdown-toggle"
@@ -83,7 +89,7 @@ const SideBar = () => {
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded={userManagementDropdownVisible}
-                onClick={toggleDropdown}
+                onClick={toggleUserDropdown}
               >
                 <People className="people" size={20} /> User Management
               </a>
@@ -101,15 +107,64 @@ const SideBar = () => {
                 </a>
               </div>
             </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="/admin_course" onClick={closeDropdown}>
+            {/* Course Management Dropdown */}
+            <li
+              className={`nav-item dropdown ${
+                courseManagementDropdownVisible ? "show" : ""
+              }`}
+              ref={courseDropdownRef}
+            >
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="courseManagementDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded={courseManagementDropdownVisible}
+                onClick={toggleCourseDropdown}
+              >
                 <Book className="book" size={20} /> Course Management
               </a>
+              <div
+                className={`dropdown-menu ${
+                  courseManagementDropdownVisible ? "show" : ""
+                }`}
+                aria-labelledby="courseManagementDropdown"
+              >
+                <a className="dropdown-item" href="/admin_course">
+                  Course Management
+                </a>
+                <a className="dropdown-item" href="/admin_courses">
+                  Chapter
+                </a>
+              </div>
             </li>
-
             <li className="nav-item">
-              <a className="nav-link" href="/admin_settings" onClick={closeDropdown}>
+              <a
+                className="nav-link"
+                href="/admin_certificate"
+                onClick={closeDropdowns}
+              >
+                <FileEarmarkText className="fileearmark" size={20} />{" "}
+                Certificate Management
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href="/admin_verification"
+                onClick={closeDropdowns}
+              >
+                <ShieldCheck className="shieldcheck" size={20} /> Verification
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href="/admin_settings"
+                onClick={closeDropdowns}
+              >
                 <FiSettings className="fi-settings" size={20} /> Settings
               </a>
             </li>
