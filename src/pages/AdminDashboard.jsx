@@ -10,7 +10,6 @@ const AdminDashboard = () => {
       <SideBar />
       <div>
         <TopBar pageTitle="Dashboard" />
-        <SearchBar/>
         <Dashboard/>
       </div>
     </div>
