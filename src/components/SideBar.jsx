@@ -176,16 +176,12 @@ const SideBar = () => {
                   src="src/assets/SatoruGojo.jpg"
                   alt="Profile"
                 />
-                <p className="admin-name">Caloy Skie</p>
+                <p className="admin-name">John Doe</p>
               </a>
               <p className="admin-position">Administrator</p>
             </div>
 
-            <li className="nav-item-logout">
-              <a className="nav-link active" href="/admin_landing">
-                <FiLogOut className="fi-log-out" size={15} /> Log Out
-              </a>
-            </li>
+           
 
             {/* Add more sidebar items as needed */}
           </ul>

@@ -8,13 +8,13 @@ const Settings = () => {
         <div class="card-container1">
         <div class="card1">
           <h2>User Management</h2>
-          <p>Manage user accounts, permissions, and roles.</p>
+          <p>Number of Users.</p>
         </div>
 
         <div class="card1">
-          <h2>Site Settings</h2>
+          <h2>Certification</h2>
           <p>
-            Adjust general settings for the site such as logo, title, and theme.
+            Certificates published.
           </p>
         </div>
 
@@ -24,19 +24,23 @@ const Settings = () => {
             Configure email settings for notifications and user communication.
           </p>
         </div>
+        <div class="card1">
+          <h2>Instructors</h2>
+          <p>
+            List of Instructors
+          </p>
+        </div>
 
         <div class="card1">
           <h2>Security</h2>
           <p>
-            Set up security measures like two-factor authentication and password
-            policies.
+            Passwords created by users.
           </p>
         </div>
         <div class="card1">
-          <h2>Security</h2>
+         <h2>Ads</h2>
           <p>
-            Set up security measures like two-factor authentication and password
-            policies.
+           Ads
           </p>
         </div>
       </div>

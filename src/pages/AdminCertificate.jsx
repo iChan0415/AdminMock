@@ -51,43 +51,60 @@ const AdminCertificate = () => {
   };
 
   return (
-    <>
-      <div>
-        <SideBar />
-        <TopBar pageTitle="Certificate Management" />
-        <SearchBar/>
-      </div>
-      <div className="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>ID</th>
+    <div>
+    <SideBar />
+    <TopBar pageTitle="Certificates" />
+    <SearchBar />
+    <div className="table-container">
+      <table>
+        <thead>
+          <tr>
+                   <th>ID</th>
                 <th>FILE NAME</th>
                 <th>CRITERIA</th>
                 <th>DATE ISSUED</th>
                 <th>TIME ISSUED</th>
                 <th>SERIAL NO.</th>
-                <th>ACTIONS</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* Map through certificates and render rows */}
-              {certificates.map((certificate) => (
-                <tr key={certificate.certificateID}>
-                  <td>{certificate.certificateID}</td>
-                  <td>{certificate.certificate_file}</td>
-                  <td>{certificate.criteria}</td>
-                  <td>{certificate.date_issued}</td>
-                  <td>{certificate.time_issued}</td>
-                  <td>{certificate.serial_no}</td>
-                  <td>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-            </table>
-        </div>
-    </>
+          </tr>
+        </thead>
+        {/* Add your table body content here */}
+        <td>001</td>
+        <td>HTML.PDF</td>
+        <td>PASS</td>
+        <td>FEB 16,2024</td>
+        <td>8:47AM</td>
+        <td>123123123</td>
+        <td>
+        <button className="delete-btn">Delete</button>
+        </td>
+        <thead>
+         
+        </thead>
+        {/* Add your table body content here */}
+        <td>002</td>
+        <td>SQL.PDF</td>
+        <td>PASS</td>
+        <td>FEB 16,2024</td>
+        <td>8:47AM</td>
+        <td>12123123</td>
+        <td>
+        <button className="delete-btn">Delete</button>
+        </td>
+        <thead>
+        </thead>
+        {/* Add your table body content here */}
+        <td>003</td>
+        <td>SVN.PDF</td>
+        <td>PASS</td>
+        <td>FEB 16,2024</td>
+        <td>8:47AM</td>
+        <td>123123</td>
+        <td>
+        <button className="delete-btn">Delete</button>
+        </td>
+      </table>
+    </div>
+  </div>
   );
 };
 

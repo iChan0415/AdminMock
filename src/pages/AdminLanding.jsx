@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Landing from '../components/Landing';
 const AdminLanding = () => {
   return (
-    <div>AdminLanding</div>
+    <div><Landing/></div>
   )
 }
 
