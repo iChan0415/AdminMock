@@ -11,7 +11,8 @@ const AdminDashboard = () => {
       <div>
         <TopBar pageTitle="Dashboard" />
 
-        <Dashboard />
+        <Dashboard/>
+ main
       </div>
     </div>
   );
