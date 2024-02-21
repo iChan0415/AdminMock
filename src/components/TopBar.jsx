@@ -46,9 +46,6 @@ const TopBar = ({pageTitle}) => {
         </div>
         <div className="admin-profile-container-top">
           <div className="profile_top">
-            <FiMessageSquare className="message-icon" size={20} />
-            <FiBell className="notification-icon" size={20} />
-
             {/* Add dropdown for top admin profile */}
             <Dropdown show={dropdownOpen} onToggle={toggleDropdown}>
               <Dropdown.Toggle variant="light" id="dropdown-basic">
