@@ -1,8 +1,8 @@
-import React from 'react'
-import SideBar from '../components/SideBar';
-import TopBar from '../components/TopBar';
-import Dashboard from '../components/Dashboard';
-import SearchBar from '../components/SearchBar';
+import React from "react";
+import SideBar from "../components/SideBar";
+import TopBar from "../components/TopBar";
+import Dashboard from "../components/Dashboard";
+import SearchBar from "../components/SearchBar";
 
 const AdminDashboard = () => {
   return (
@@ -10,11 +10,11 @@ const AdminDashboard = () => {
       <SideBar />
       <div>
         <TopBar pageTitle="Dashboard" />
-        <SearchBar/>
-        <Dashboard/>
+
+        <Dashboard />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdminDashboard
+export default AdminDashboard;

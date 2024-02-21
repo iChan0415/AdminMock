@@ -1,53 +1,65 @@
 import React from "react";
+import { useState } from "react";
+import BarChart from "../components/BarChart";
+import PieChart from "../components/PieChart";
+import { UserData } from "../pages/Data";
+import { UserDataPie } from "../pages/DataPie";
 import "../css/Dashboard.css";
 
-const Settings = () => {
+function Dashboard() {
+  const [userData, setUserData] = useState({
+    labels: UserData.map((data) => data.year),
+    datasets: [
+      {
+        label: "Users Gained",
+        data: UserData.map((data) => data.userGain),
+        backgroundColor: [
+          "rgba(75,192,192,1)",
+          "#ecf0f1",
+          "#50AF95",
+          "#f3ba2f",
+          "#2a71d0",
+        ],
+        borderColor: "black",
+        borderWidth: 2,
+      },
+    ],
+  });
+
+  const [userDataPie, setUserDataPie] = useState({
+    labels: UserDataPie.map((data) => data.year),
+    datasets: [
+      {
+        label: "Users Gained",
+        data: UserDataPie.map((data) => data.userGain),
+        backgroundColor: [
+          "rgba(75,192,192,1)",
+          "#2a71d0",
+         
+        ],
+        borderColor: "black",
+        borderWidth: 2,
+      },
+      
+    ],
+  });
+
+  // IF YOU SEE THIS COMMENT: I HAVE GOOD EYESIGHT
+
   return (
-    <div>
-        <div className="settings-container">
-        <div class="card-container1">
-        <div class="card1">
-          <h2>User Management</h2>
-          <p>Number of Users.</p>
+    <div className="charts_container">
+      <div className="Charts">
+        <div style={{ width: 400 }}>
+          <BarChart chartData={userData} />
+          <p>Bar Chart</p>
         </div>
-
-        <div class="card1">
-          <h2>Certification</h2>
-          <p>
-            Certificates published.
-          </p>
-        </div>
-
-        <div class="card1">
-          <h2>Email Configuration</h2>
-          <p>
-            Configure email settings for notifications and user communication.
-          </p>
-        </div>
-        <div class="card1">
-          <h2>Instructors</h2>
-          <p>
-            List of Instructors
-          </p>
-        </div>
-
-        <div class="card1">
-          <h2>Security</h2>
-          <p>
-            Passwords created by users.
-          </p>
-        </div>
-        <div class="card1">
-         <h2>Ads</h2>
-          <p>
-           Ads
-          </p>
+        <div style={{ width: 400 }}>
+          <PieChart chartData={userDataPie} />
+          <p>Pie Chart</p>
         </div>
       </div>
-        </div>
-      
     </div>
   );
-};
+}
 
-export default Settings;
+export default Dashboard;
