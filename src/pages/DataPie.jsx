@@ -1,7 +1,7 @@
 export const UserDataPie = [
   {
     id: 1,
-    year: 'active',
+    year: 'Active',
     userGain: 9000,
     userLost: 0,
   },

@@ -65,6 +65,7 @@ const AdminCertificate = () => {
                 <th>DATE ISSUED</th>
                 <th>TIME ISSUED</th>
                 <th>SERIAL NO.</th>
+                <th>ACTIONS</th>
           </tr>
         </thead>
         {/* Add your table body content here */}

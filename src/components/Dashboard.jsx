@@ -20,8 +20,6 @@ function Dashboard() {
           "#f3ba2f",
           "#2a71d0",
         ],
-        borderColor: "black",
-        borderWidth: 2,
       },
     ],
   });
@@ -35,10 +33,7 @@ function Dashboard() {
         backgroundColor: [
           "rgba(75,192,192,1)",
           "#2a71d0",
-         
         ],
-        borderColor: "black",
-        borderWidth: 2,
       },
       
     ],
@@ -51,11 +46,11 @@ function Dashboard() {
       <div className="Charts">
         <div style={{ width: 400 }}>
           <BarChart chartData={userData} />
-          <p>Bar Chart</p>
+          <p style={{fontWeight: "bold", paddingTop: "10px", color: "gray"}}>NO. OF USERS</p>
         </div>
-        <div style={{ width: 400 }}>
+        <div style={{ width: 400}}>
           <PieChart chartData={userDataPie} />
-          <p>Pie Chart</p>
+          <p style={{fontWeight: "bold", paddingTop: "10px", color: "gray"}}>USERS CHART</p>
         </div>
       </div>
     </div>
